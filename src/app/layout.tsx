@@ -1,14 +1,10 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import type { Metadata } from "next";
+import { Merriweather_Sans } from "next/font/google";
+import NavBar from "./components/nav-bar";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const merriweather = Merriweather_Sans({
+  variable: "--font-merriweather-sans",
   subsets: ["latin"],
 });
 
@@ -23,12 +19,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
-      </body>
-    </html>
+      <html lang="es-ES">
+        <body
+          className={`${merriweather.className} antialiased`}
+        >
+          <NavBar />
+          {children}
+        </body>
+      </html>
   );
 }
