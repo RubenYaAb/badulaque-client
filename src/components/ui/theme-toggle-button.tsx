@@ -38,7 +38,7 @@ export default function ThemeToggleButton(): JSX.Element | null {
       toggle={setToggle}
       onClickCapture={toggleTheme}
       className="text-2xl"
-      title={isToggled ? 'Tema oscuro' : 'Tema claro'}
+      title={isToggled ? 'Modo oscuro' : 'Modo claro'}
     />
   )
 }
